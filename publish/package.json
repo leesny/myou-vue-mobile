@@ -1,0 +1,20 @@
+{
+  "name": "pm2-myou-vue-mobile",
+  "version": "1.0.0",
+  "description": "myou-vue-mobile 1.0 Stable",
+  "main": "ecosystem.config.js",
+  "scripts": {
+    "pm2-stop": "pm2 stop all",
+    "pm2-start": "pm2 startOrRestart ecosystem.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "leesny",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.3",
+    "connect-history-api-fallback": "^1.6.0",
+    "express": "^4.16.4",
+    "express-useragent": "^1.0.12",
+    "http-proxy-middleware": "^0.19.1"
+  }
+}
