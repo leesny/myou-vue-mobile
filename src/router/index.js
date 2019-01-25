@@ -86,11 +86,19 @@ export default new Router({
       )
     },
     {
-      path: '/upload',
-      name: 'Upload',
+      path: '/upload-h5',
+      name: 'UploadH5',
       component: () => import(
         /* webpackChunkName: "upload" */
-        '@/views/upload/Upload'
+        '@/views/upload/UploadH5'
+      )
+    },
+    {
+      path: '/upload-wx',
+      name: 'UploadWx',
+      component: () => import(
+        /* webpackChunkName: "upload" */
+        '@/views/upload/UploadWx'
       )
     },
     {

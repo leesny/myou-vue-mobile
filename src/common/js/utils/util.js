@@ -192,6 +192,16 @@ export const util = {
       arr[idx++] = [item, obj[item]]
     }
     return new URLSearchParams(arr).toString()
+  },
+  /**
+   * 如果是在微信浏览器里面，就注入微信JsSDK
+   */
+  injectWXJsSDK() {
+    const script = document.createElement('script');
+    script.src = '//res.wx.qq.com/open/js/jweixin-1.3.2.js';
+    script.async = true;
+    document.body.appendChild(script);
+    script.onload = this.scriptOnload;
   }
 };
 

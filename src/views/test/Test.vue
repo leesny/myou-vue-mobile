@@ -17,8 +17,15 @@
       <v-container fluid grid-list-lg>
         <v-layout row wrap>
           <v-flex xs12>
-              vuex
-              
+            vuex: 待完善
+          </v-flex>
+          <v-flex xs12>
+            H5文件上传:
+            <upload-h5></upload-h5>
+          </v-flex>
+          <v-flex xs12>
+            wxsdk文件上传:
+            <upload-wx></upload-wx>
           </v-flex>
         </v-layout>
       </v-container>
@@ -26,23 +33,26 @@
   </div>
 </template>
 <script>
+  import UploadH5 from '@/views/upload/UploadH5.vue'
+  import UploadWx from '@/views/upload/UploadWx.vue'
 
-export default {
-  name: "Test",
-  data() {
-    return {
-    };
-  },
-  computed: {
-  },
-  methods: {
-    handleGoBack() {
-      this.$router.go(-1);
+  export default {
+    name: "Test",
+    components: { UploadH5, UploadWx },
+    data() {
+      return {
+      };
     },
+    computed: {
+    },
+    methods: {
+      handleGoBack() {
+        this.$router.go(-1);
+      },
 
-    handleRefresh() {
-      this.$router.go(0);
+      handleRefresh() {
+        this.$router.go(0);
+      }
     }
-  }
-};
+  };
 </script>
