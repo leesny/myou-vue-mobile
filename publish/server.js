@@ -41,8 +41,8 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.get(['//','/'],(req,res,next)=>{ 
   console.log('访问的useraget source信息： ',req.useragent.source)
 
-  // 仅限app webview打开
-  // if(req.useragent.source.toString().toLowerCase().includes('themeablebrowser')){
+  // 仅限微信浏览器打开
+  // if(req.useragent.source.toString().toLowerCase().includes('micromessenger')){
   //   next();   
   // }else{
   //   res.sendStatus(403);
